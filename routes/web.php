@@ -33,4 +33,11 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 Route::get('/redirect/{service}', 'SocialController@redirect');
+
 Route::get('/callback/{service}', 'SocialController@callback');
+
+Route::get('fillable', 'CloudController@getOffers');
+
+Route::group(['prefix' => 'offers'], function() {
+    Route::get('store', 'CloudController@store');
+});
