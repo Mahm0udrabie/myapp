@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ef73048-b074-4c44-bf93-9fb4e186f809" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/emails/user_mail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CloudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CloudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SocialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocialController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_20_220023_create_offers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_20_220023_create_offers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,6 +184,10 @@
       <workItem from="1608539755630" duration="226000" />
       <workItem from="1608540999375" duration="3318000" />
       <workItem from="1608544367411" duration="5048000" />
+      <workItem from="1608583985363" duration="6470000" />
+      <workItem from="1608626752132" duration="4726000" />
+      <workItem from="1608672092822" duration="1220000" />
+      <workItem from="1608710876340" duration="2075000" />
     </task>
     <servers />
   </component>
@@ -199,5 +205,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/landing.blade.php</url>
+          <line>101</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

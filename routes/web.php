@@ -39,5 +39,7 @@ Route::get('/callback/{service}', 'SocialController@callback');
 Route::get('fillable', 'CloudController@getOffers');
 
 Route::group(['prefix' => 'offers'], function() {
-    Route::get('store', 'CloudController@store');
+    Route::get('create', 'CloudController@create');
+    Route::post('store', 'CloudController@store')->name('offers.store');
+
 });

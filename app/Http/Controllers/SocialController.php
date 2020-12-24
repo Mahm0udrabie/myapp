@@ -11,7 +11,7 @@ class SocialController extends Controller
         return Socialite::driver($service)->redirect();
     }
     public function callback($service) {
-         $user = Socialite::with($service)->stateless()->user();
+        $user = Socialite::with($service)->stateless()->user();
         return response()->json($user);
     }
 }
