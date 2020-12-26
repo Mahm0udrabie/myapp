@@ -14,7 +14,7 @@ class CloudController extends Controller
     }
     public function store(Request $request) {
 //        dd($request->all());
-        dd($request);
+//        dd($request);
         $rules     = $this -> getRuels();
         $messages  = $this -> getMessages();
         $validator = Validator::make($request->all(), $rules, $messages);

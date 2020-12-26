@@ -4,6 +4,7 @@
 @endsection
 @include('includes.header')
 @section('content')
+
     <h2 class="text-center mt-5">Add your offer</h2>
 
     <div class="row m-5">

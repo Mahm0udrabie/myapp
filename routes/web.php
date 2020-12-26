@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SocialController;
 
-/*
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
+    /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -38,8 +40,13 @@ Route::get('/callback/{service}', 'SocialController@callback');
 
 Route::get('fillable', 'CloudController@getOffers');
 
-Route::group(['prefix' => 'offers'], function() {
+    Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+        ], function() {
+        Route::group(['prefix' => 'offers'], function() {
+
     Route::get('create', 'CloudController@create');
+
     Route::post('store', 'CloudController@store')->name('offers.store');
 
+    });
 });
