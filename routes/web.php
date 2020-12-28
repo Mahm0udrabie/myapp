@@ -43,10 +43,12 @@ Route::get('fillable', 'CloudController@getOffers');
     Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
         ], function() {
         Route::group(['prefix' => 'offers'], function() {
-
-    Route::get('create', 'CloudController@create');
-
-    Route::post('store', 'CloudController@store')->name('offers.store');
-
-    });
+        Route::get('create', 'CloudController@create')->name('offers.create');
+        Route::get('/{id}/edit','CloudController@edit')->name('offers.edit');
+        Route::post('store', 'CloudController@store')->name('offers.store');
+        Route::put('/{id}/update', 'CloudController@update')->name('offers.update');
+        Route::get('all','CloudController@getAllOffers')->name('offers.all');
+        Route::get('/{id}/delete','CloudController@delete')->name('offers.delete');
+        });
+    Route::get('youtube', 'CloudController@getVideo');
 });
