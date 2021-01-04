@@ -58,6 +58,9 @@ class CloudController extends Controller
     }
     public function delete($id) {
         $offer= Offer::find($id);
+        if(!$offer) {
+            return redirect()->back()->with(['error' => __('messages.notOffer')]);
+        }
         if($offer->delete()) {
             session()->flash('danger', __('messages.delete_flash'));
         }

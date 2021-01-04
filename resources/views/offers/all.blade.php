@@ -14,6 +14,11 @@
                 {{  session()->get('danger') }}
             </div>
         @endif
+        @if(session()->has('error'))
+            <div class="text-center alert alert-danger">
+                {{  session()->get('error') }}
+            </div>
+        @endif
     @endif
     @if(count($offers) > 0)
         <h2 class="text-center m-5">
