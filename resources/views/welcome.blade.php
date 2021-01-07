@@ -63,6 +63,8 @@
                 color: white;
             }
         </style>
+    <head>
+        <title>welcome</title>
     </head>
     <body>
         <div class="flex-center position-ref full-height">

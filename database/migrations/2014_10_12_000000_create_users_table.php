@@ -11,6 +11,7 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
@@ -21,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->tinyInteger('expire')->default(0)->comment('0 => active 1 => expire');
+            $table->integer('age')->default(14)->nullable();
             $table->rememberToken();
 
             $table->timestamps();

@@ -4,22 +4,8 @@
 @endsection
 @include('includes.header')
 @section('content')
-    @if(session()->has('success'))
-        <div class="text-center alert alert-success">
-            {{  session()->get('success') }}
+        <div id="msg" class="text-center alert alert-success" style="display: none">
         </div>
-    @else
-        @if(session()->has('danger'))
-            <div class="text-center alert alert-danger">
-                {{  session()->get('danger') }}
-            </div>
-        @endif
-        @if(session()->has('error'))
-            <div class="text-center alert alert-danger">
-                {{  session()->get('error') }}
-            </div>
-        @endif
-    @endif
     @if(count($offers) > 0)
         <h2 class="text-center m-5">
             {{ __('messages.offers') }}
@@ -36,8 +22,9 @@
                 <th scope="col">{{__('messages.operations')}}</th>
             </tr>
             </thead>
+            <tbody>
             @foreach($offers as $offer)
-            <tr>
+            <tr class="offerRow{{$offer->id}}">
                 <th scope="row">{{ $offer->id }}</th>
                 <td>
                     <img src="{{ asset('images/offers/'.$offer->image) }}" alt="Image" width="100" height="100">
@@ -46,10 +33,10 @@
                 <td>{{ $offer->price }}</td>
                 <td>{{ $offer->details }}</td>
                 <td>
-                    <a href="{{ route('offers.edit', $offer->id) }}" class="btn btn-primary">
+                    <a href="{{ route('ajax.offers.edit', $offer->id) }}" class="btn btn-primary">
                         {{ __('messages.edit') }}
                     </a>
-                    <a href="{{ route('offers.delete', $offer->id) }}" class="btn btn-danger">
+                    <a href="" offer_id="{{$offer->id}}" class="delete_btn btn btn-danger">
                         {{ __('messages.delete') }}
                     </a>
                 </td>
@@ -66,6 +53,32 @@
         <h2>
     @endif
 @endsection
-
 @section('scripts')
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        $(document).on('click', '.delete_btn', function (e) {
+            e.preventDefault();
+            let offer_id  = $(this).attr('offer_id');
+            $.ajax({
+                type:'post',
+                url:"{{ route('ajax.offers.delete') }}",
+                data: {
+                  '_token':"{{csrf_token()}}",
+                    'id':  offer_id
+                },
+
+                success: function (data) {
+                    if(data.status == true) {
+                        let str = data.msg;
+                        $('<p>'+str+'</p>').appendTo('#msg');
+                        $('#msg').show();
+                        $('.offerRow'+data.id).remove();
+                    }
+                }, error: function(reject) {
+                    console.log('error');
+                }
+            });
+        });
+    </script>
 @endsection
+

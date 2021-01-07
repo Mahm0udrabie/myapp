@@ -24,5 +24,6 @@ return [
     "update_flash" => "Offer Updated Successfully",
     "delete_flash" => "Offer deleted Successfully",
     'image' => "image",
-    "notOffer" => "offer does not exist"
+    "notOffer" => "offer does not exist",
+    "SaveOffer" => "save service"
 ];

@@ -52,3 +52,76 @@ Route::get('fillable', 'CloudController@getOffers');
         });
     Route::get('youtube', 'CloudController@getVideo');
 });
+    ############## Start Ajax Routes ##############
+Route::group(["prefix" => "ajax-offers"] , function() {
+   Route::get('create', 'AjaxController@create')->name('ajax.offers.create');
+   Route::post('store', 'AjaxController@store')->name('ajax.offers.store');
+   Route::get('all', 'AjaxController@all')->name('ajax.offers.all');
+   Route::get('{id}/edit', 'AjaxController@edit')->name('ajax.offers.edit');
+   Route::post('/{id}/update', 'AjaxController@update')->name('ajax.offers.update');
+   Route::post('delete', 'AjaxController@delete')->name('ajax.offers.delete');
+});
+    ############## End   Ajax Routes ##############
+
+############ Start Authentications and Guards  ###########
+
+Route::group(['middleware'=> 'CheckAge', 'namespace' => "Auth"], function() {
+    Route::get('adults', 'CustomAuthController@adult')->name("adult");
+});
+Route::get('site', 'Auth\CustomAuthController@site')->middleware('auth:web')-> name('site');
+Route::get('admin', 'Auth\CustomAuthController@admin')->middleware('auth:admin') -> name('admin');
+
+Route::get('admin/login', 'Auth\CustomAuthController@adminLogin')-> name('admin.login');
+Route::post('admin/login', 'Auth\CustomAuthController@CheckAdminLogin')-> name('save.admin.login');
+############ End Authentications and Guards  ###########
+
+
+############ start relations routes ##########
+
+######### ONE TO ONE RELATION ###########
+
+############# Start ##############
+
+Route::get('has-one','Relations\RelationsController@hasOneRelation');
+
+Route::get('has-one-reverse','Relations\RelationsController@hasOneRelationReverse');
+
+Route::get('get-user-has-phone','Relations\RelationsController@getUserHasPhone');
+
+Route::get('get-user-has-not-phone','Relations\RelationsController@getUserNotHasPhone');
+
+Route::get('get-user-has-phone-with-condition','Relations\RelationsController@getUserHasPhoneWithCondition');
+
+############# End ##############
+
+########## ONE TO MANY RELATION ###############
+
+############# Start ##############
+
+Route::get('hospital-has-many', "Relations\RelationsController@getHospitalDoctors");
+
+Route::get('hospitals/', 'Relations\RelationsController@hospitals')->name('hospitals.all');
+
+Route::get('doctors/{hospital_id}', "Relations\RelationsController@doctors")->name('hospital.doctors');
+
+Route::get('hospitals/{hospital_id}', "Relations\RelationsController@deleteHospital")->name('hospital.delete');
+
+
+Route::get('hospital-has-doctor', "Relations\RelationsController@hospitalsHasDoctors");
+
+Route::get('hospital-has-doctors-male', "Relations\RelationsController@hospitalsHasOnlyMaleDoctors");
+
+Route::get('hospital-does-not-have-doctor', "Relations\RelationsController@hospitalsDoesNotHaveDoctors");
+
+Route::get('doctor/services', "Relations\RelationsController@getDoctorServices");
+Route::get('service/doctors', "Relations\RelationsController@getServicesDoctors");
+Route::get('doctor/services/{doctor_id}', "Relations\RelationsController@getDoctorServicesById")->name('doctors.services');
+
+Route::post('saveServicesToDoctors', "Relations\RelationsController@saveServicesToDoctors")->name('save.doctors.services');
+
+
+############# End ##############
+
+############ End relations routes ##########
+
+

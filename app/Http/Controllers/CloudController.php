@@ -15,7 +15,7 @@ class CloudController extends Controller
 {
     use OfferTrait;
     public function getOffers() {
-        return Offer::get();
+        return Offer::all();
     }
     public function store(OfferRequest $request) {
 //        dd($request->all());
@@ -51,7 +51,15 @@ class CloudController extends Controller
     }
     public function update(UpdateOffersRequest $request,  $id) {
         $offer = Offer::findOrFail($id);
-        if($offer->update($request->all())) {
+        $filename = $this->saveImage($request -> image, 'images/offers');
+        if(Offer::update([
+            'name' => $request->name,
+            'price' => $request->price,
+            'details' => $request->details,
+            'image' => $filename,
+            'lang' => $request->lang
+        ]))
+         {
             session()->flash('success', __('messages.update_flash'));
         }
         return redirect(route('offers.all'));
@@ -67,7 +75,7 @@ class CloudController extends Controller
         return redirect(route('offers.all'));
     }
     public function getAllOffers() {
-        $offers = Offer::select('id', 'name', 'price', 'details')->get();
+        $offers = Offer::select('id', 'name', 'price', 'image','details')->get();
 //            return view('offers.all')->with('offers', $offers);
         return view('offers.all', compact('offers'));
     }
