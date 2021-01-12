@@ -59,16 +59,17 @@
 
             </tbody>
         </table>
-      
+     
     </div>
-  
+    <div class="d-flex justify-content-center">
+        {!! $offers-> links() !!}
+    </div>
     @else
         <h2 class="text-center m-5">
             {{ __('messages.ifOffers') }}
         <h2>
     @endif
 @endsection
-
 
 @section('scripts')
 @endsection

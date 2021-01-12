@@ -13,4 +13,7 @@ class Hospital extends Model
     public function doctors(){
         return $this -> hasMany('App\Models\Doctor','hospital_id','id');
     }
+    public function country() {
+        return  $this -> belongsTo('App\Models\Country', 'hospital_id', 'id');
+    }
 }

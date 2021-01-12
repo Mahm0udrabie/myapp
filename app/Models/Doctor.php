@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Doctor extends Model
 {
     protected $table    = "doctors";
-    protected $fillable = ['name', 'title', 'hospital_id','gender'];
+    protected $fillable = ['name', 'title', 'hospital_id','gender','medical_id'];
     protected $hidden  = ['created_at', 'updated_at', 'pivot'];
 
     public function hospital(){
@@ -14,5 +14,11 @@ class Doctor extends Model
     public function services() {
        return $this->belongsToMany('App\Models\Service', 'doctor_services','doctor_id','service_id','id','id');
     }
+    // Laravel Accessors
+    // handel your coming data 
+    public function getGenderAttribute($val) {
+        return $val == 1 ? "male" : "female";
+     }
+
 
 }

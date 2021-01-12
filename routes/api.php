@@ -25,7 +25,6 @@ Route::get('/', function () {
 });
 
 
-
 // Get list of meetings.
 Route::get('/meetings', 'Zoom\MeetingController@list');
 

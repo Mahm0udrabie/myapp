@@ -24,7 +24,6 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('expire')->default(0)->comment('0 => active 1 => expire');
             $table->integer('age')->default(14)->nullable();
             $table->rememberToken();
-
             $table->timestamps();
         });
     }

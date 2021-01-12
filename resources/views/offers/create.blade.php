@@ -21,7 +21,7 @@
     @endif
     <div class="row m-5">
 
-        <form action="{{ isset($edit_offers) ? route('offers.update', $edit_offers->id) : route('offers.store') }}" method="post" class="m-auto" enctype="multipart/form-data">
+        <form method="POST" action="{{ isset($edit_offers) ? route('offers.update', $edit_offers->id) : route('offers.store') }}"  class="m-auto" enctype="multipart/form-data">
             @csrf
             @if(isset($edit_offers))
                 @method('PUT')
