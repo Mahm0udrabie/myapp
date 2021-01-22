@@ -33,7 +33,7 @@
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
-
+            
             <div class="form-group">
                 <input type="text" class="form-control" value="{{ isset($edit_offers) ? $edit_offers->price : "" }}"   name="price" placeholder="add your price" id="">
                 @error('price')
