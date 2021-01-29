@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ef73048-b074-4c44-bf93-9fb4e186f809" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/myapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myapp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +12,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -149,9 +151,8 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -159,6 +160,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="stylesheet.code.style.group" />
+    <property name="settings.editor.splitter.proportion" value="0.38900203" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -173,13 +176,33 @@
       <recent name="E:\myapp\public\images\offers" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="php artisan serve" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5ef73048-b074-4c44-bf93-9fb4e186f809" name="Default Changelist" comment="" />
@@ -218,27 +241,69 @@
       <workItem from="1609935267053" duration="17838000" />
       <workItem from="1610016879506" duration="1696000" />
       <workItem from="1610018712678" duration="4000" />
+      <workItem from="1611564913091" duration="1290000" />
+      <workItem from="1611571897456" duration="2036000" />
+      <workItem from="1611575272881" duration="46000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="work" />
     <option name="LAST_COMMIT_MESSAGE" value="work" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1611575302822">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1611575302822" />
+    <state width="661" height="248" key="GridCell.Tab.0.bottom" timestamp="1611571549936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="248" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611571549936" />
+    <state width="661" height="248" key="GridCell.Tab.0.center" timestamp="1611571549936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="248" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611571549936" />
+    <state width="661" height="248" key="GridCell.Tab.0.left" timestamp="1611571549936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="248" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611571549936" />
+    <state width="661" height="248" key="GridCell.Tab.0.right" timestamp="1611571549936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="248" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611571549936" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1611571970410">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611571970410" />
+    <state x="384" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1611575282661">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="384" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1611575282661" />
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611565000825">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1611565000825" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1611564982660">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1611564982660" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

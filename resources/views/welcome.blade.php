@@ -69,7 +69,8 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="links">
+                    <a href="http://laracasts.com">Laracasts</a>
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
